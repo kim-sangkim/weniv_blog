@@ -3,6 +3,6 @@
 * hello world 1
 * hello world 2
 
-수식
+* 수식
 
-$\mathbb{R}$
+    * $\mathbb{R}$
