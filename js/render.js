@@ -87,6 +87,10 @@ async function renderMenu() {
         const url = new URL(origin);
         url.searchParams.set("menu", menu.name);
         window.history.pushState({}, "", url);
+
+        //수식 변환 코드 추가
+        if (window.MathJax)
+        {MathJax.typesetPromise();}    
       } else {
         renderOtherContents(menu);
       }
@@ -289,6 +293,10 @@ function renderBlogList(searchResult = null, currentPage = 1) {
               const url = new URL(origin);
               url.searchParams.set("post", post.name);
               window.history.pushState({}, "", url);
+
+              //수식 변환 코드 추가
+              if (window.MathJax)
+              { MathJax.typesetPromise();}
             });
         };
         document.getElementById("blog-posts").appendChild(cardElement);
@@ -346,6 +354,10 @@ function renderBlogList(searchResult = null, currentPage = 1) {
                 const url = new URL(origin);
                 url.searchParams.set("post", post.name);
                 window.history.pushState({}, "", url);
+
+                //수식 변환 코드 추가
+                if (window.MathJax)
+                { MathJax.typesetPromise();}
               });
           } catch (error) {
             styleMarkdown("post", "# Error입니다. 파일명을 확인해주세요.");
@@ -393,6 +405,10 @@ function renderOtherContents(menu) {
         const url = new URL(origin);
         url.searchParams.set("menu", menu.name);
         window.history.pushState({}, "", url);
+
+        //수식 변환 코드 추가
+        if (window.MathJax)
+        {MathJax.typesetPromise();}
       });
   } catch (error) {
     styleMarkdown("menu", "# Error입니다. 파일명을 확인해주세요.", undefined);
@@ -654,6 +670,10 @@ async function initialize() {
             // 렌더링 후에는 URL 변경(query string으로 블로그 포스트 이름 추가)
             const url = new URL(window.location.href);
             window.history.pushState({}, "", url);
+
+            //수식 변환 코드 추가
+            if (window.MathJax)
+            {MathJax.typesetPromise();}
           });
       } catch (error) {
         styleMarkdown("menu", "# Error입니다. 파일명을 확인해주세요.");
@@ -676,6 +696,10 @@ async function initialize() {
             // 렌더링 후에는 URL 변경(query string으로 블로그 포스트 이름 추가)
             const url = new URL(window.location.href);
             window.history.pushState({}, "", url);
+
+            //수식 변환 코드 추가
+            if (window.MathJax)
+            {MathJax.typesetPromise();}
           });
       } catch (error) {
         styleMarkdown("post", "# Error입니다. 파일명을 확인해주세요.");
