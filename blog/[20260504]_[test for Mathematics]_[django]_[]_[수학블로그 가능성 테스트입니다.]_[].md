@@ -6,6 +6,6 @@
 * 수식
     * $\sqrt{4}$
     * $\mathbb{QRSTUV}$
-    * $\forall \epsilon>0, \ \exist \delta>0 \ s.t \ |x-a|<\delta \Rightarrow |f(x)-f(a)|<\epsilon$
+    * $\forall \epsilon>0, \ \exists \delta>0 \ s.t \ |x-a|<\delta \Rightarrow |f(x)-f(a)|<\epsilon$
 
-    $$\forall \epsilon>0, \ \exist \delta>0 \ s.t \ |x-a|<\delta \Rightarrow |f(x)-f(a)|<\epsilon$$
+    $$\forall \epsilon>0, \ \exists \delta>0 \ s.t \ |x-a|<\delta \Rightarrow |f(x)-f(a)|<\epsilon$$
