@@ -52,7 +52,7 @@
     </script>
     <!-- // tailwind -->
 
-    <style>
+        <style>
       @keyframes slideDown {
         from {
           transition: all 1s;
@@ -64,8 +64,24 @@
           height: 60px;
         }
       }
-      .markdown-cell > ul > li > p {
-        display: inline-block;
+      
+      /* 마크다운 리스트 스타일 강제 복구 */
+      #contents ul {
+        list-style-type: disc !important; /* 동그라미 점 살리기 */
+        padding-left: 1.5rem !important;  /* 왼쪽 들여쓰기 공간 확보 */
+        margin-bottom: 1rem;
+      }
+      #contents ul ul {
+        list-style-type: circle !important; /* 안쪽 리스트는 빈 동그라미로 */
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+      }
+      #contents li {
+        margin-bottom: 0.5rem;
+      }
+      #contents li > p {
+        display: inline !important; /* 점과 글자가 무조건 한 줄에 나오게 강제 설정 */
+        margin: 0;
       }
     </style>
   </head>
