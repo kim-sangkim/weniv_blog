@@ -5,4 +5,4 @@
 
 * 수식
 
-    * $mathbb{R}$
+    * $\mathbb R$
